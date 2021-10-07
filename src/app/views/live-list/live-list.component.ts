@@ -10,6 +10,8 @@ import { Live } from 'src/app/shared/model/live.model';
 export class LiveListComponent implements OnInit {
 
   livesPrevious: Live[] = [];
+  livesNext: Live[] = [];
+
 
   constructor(public liveService: LiveService) { }
 
@@ -22,6 +24,12 @@ export class LiveListComponent implements OnInit {
       console.log(data);
       this.livesPrevious = data.content;
     });
+    this.liveService.getLiveWithFlag('next').subscribe(data => {
+      console.log(data);
+      this.livesPrevious = data.content;
+    });
   }
+
+
 
 }
