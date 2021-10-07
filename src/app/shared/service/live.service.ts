@@ -7,7 +7,7 @@ import { ResponsePageable } from '../model/responsePageable.model';
   providedIn: 'root'
 })
 export class LiveService {
-  apiUrl = 'http://localhost:8080/lives';
+  apiUrl = 'http://localhost:8081/live_document';
   httpOptions = {
     headers : new HttpHeaders({
       'Content-Type': 'application/json'
