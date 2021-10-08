@@ -1,0 +1,45 @@
+<h1 mat-dialog-title>New Live</h1>
+
+<mat-dialog-content class="form-specs">
+  <form [formGroup]="liveForm">
+
+    <mat-form-field appearance="fill" class="form-full-width">
+      <mat-label>Live Name</mat-label>
+      <input matInput formControlName="liveName" name="liveName">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-full-width">
+      <mat-label>Channel Name</mat-label>
+      <input matInput formControlName="channelName" name="channelName">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-full-width">
+      <mat-label>Live Link</mat-label>
+      <input matInput formControlName="liveLink" name="liveLink">
+    </mat-form-field>
+    <div fxLayout="row wrap">
+      <div fxFlex="40" fxFill fxLayoutAlign="start center">
+        <mat-form-field class="form-full-width">
+          <mat-label>Choose live date</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="liveDate" name="liveDate">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div fxFlex></div>
+      <div fxFlex="40" fxFill fxLayoutAlign="start center">
+        <mat-form-field class="form-full-width">
+          <mat-label>Choose live time</mat-label>
+          <input matInput type="time" #time [matDatepicker]="picker" formControlName="liveTime" name="liveTime">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button (click)="cancelDialog()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="createLive()">Add</button>
+</mat-dialog-actions>

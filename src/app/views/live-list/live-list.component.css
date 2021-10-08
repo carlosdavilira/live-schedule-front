@@ -14,3 +14,9 @@
   margin-bottom: 0px;
   min-height: 70px;
 }
+
+.mat-chip-date {
+  background-color: #90caf9 !important;
+  color: black !important;
+  border-radius: 10px;
+}

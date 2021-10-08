@@ -2,6 +2,8 @@ import { LiveService } from './../../shared/service/live.service';
 import { Component, OnInit } from '@angular/core';
 import { Live } from 'src/app/shared/model/live.model';
 import { DomSanitizer } from '@angular/platform-browser';
+import {MatChipsModule} from '@angular/material/chips';
+
 
 @Component({
   selector: 'app-live-list',
